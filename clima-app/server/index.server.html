@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ClimaApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/logo.png">
+  <style>
+    /* Estilo general para la aplicación */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #0b131e;
+      /* Fondo más suave */
+      margin: 0;
+      /* Eliminar márgenes */
+      padding: 0;
+      /* Eliminar relleno */
+      height: 100vh;
+      /* Asegurar que el body ocupe toda la altura de la ventana */
+    }
+
+    div.middle-div {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 95%;
+      max-width: 1200px;
+      /* Ajusta la altura según sea necesario */
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 768px) {
+      div.middle-div {
+        width: 95%;
+        height: 100%;
+      }
+    }
+
+    .div1 {
+      background-color: #202B3B;
+      outline: 1.5px solid black;
+      border-radius: 6px;
+      height: 60%;
+      grid-area: 1 / 1 / 2 / 6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .div1 img {
+      max-height: 80px;
+      margin: 20px;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .search-input {
+      padding: 8px 12px;
+      border: none;
+      border-right: none;
+      color: #ccc;
+      background-color: #0b131e;
+      /* Sin borde derecho para unir al botón */
+      border-radius: 15px 0 0 15px;
+      /* Borde redondeado solo en el lado izquierdo */
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-button {
+      padding: 6px 12px;
+      border: none;
+      background-color: #1798ff;
+      color: #000;
+      cursor: pointer;
+      border-radius: 0 15px 15px 0;
+      /* Borde redondeado solo en el lado derecho */
+      border-left: none;
+      /* Sin borde izquierdo para unir al input */
+      font-size: 16px;
+    }
+
+    .search-button:hover {
+      background-color: #0056b3;
+      /* Color al pasar el cursor por encima */
+    }
+
+
+    .div2 {
+      background-color: #202B3B;
+      outline: 1.5px solid black;
+      border-radius: 6px;
+      grid-area: 2 / 4 / 4 / 6;
+    }
+
+    .div3 {
+      background-color: #202B3B;
+      outline: 1.5px solid black;
+      border-radius: 6px;
+      grid-area: 4 / 4 / 6 / 6;
+    }
+
+    .div4 {
+      background-color: #202B3B;
+      outline: 1.5px solid black;
+      border-radius: 6px;
+      grid-area: 2 / 1 / 6 / 4;
+    }
+
+    div.middle-div #left-div {
+      outline: 1px solid black;
+      /* Borde para visibilidad */
+    }
+
+    #appContainer {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    div.middle-div #right-div {
+      outline: 1px solid black;
+      height: 90%;
+      /* Borde para visibilidad */
+      display: grid;
+      grid-template-columns: 2, 1fr;
+      gap: 10px;
+    }
+
+    div.middle-div #right-div div {
+      border-radius: 6px;
+      background-color: #202B3B;
+      outline: 1px solid black;
+    }
+  </style>
+<link rel="stylesheet" href="styles-5INURTSO.css"></head>
+
+<body><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script>
+  <app-root></app-root>
+
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-DBYD5X7O.js" type="module"></script></body>
+
+</html>

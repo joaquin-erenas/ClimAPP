@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en" data-critters-container><head>
+  <meta charset="utf-8">
+  <title>ClimaApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/logo.png">
+  <style>
+    /* Estilo general para la aplicación */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #0b131e;
+      /* Fondo más suave */
+      margin: 0;
+      /* Eliminar márgenes */
+      padding: 0;
+      /* Eliminar relleno */
+      height: 100vh;
+      /* Asegurar que el body ocupe toda la altura de la ventana */
+    }
+
+    div.middle-div {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 95%;
+      max-width: 1200px;
+      /* Ajusta la altura según sea necesario */
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 768px) {
+      div.middle-div {
+        width: 95%;
+        height: 100%;
+      }
+    }
+
+    .div1 {
+      background-color: #202B3B;
+      outline: 1.5px solid black;
+      border-radius: 6px;
+      height: 60%;
+      grid-area: 1 / 1 / 2 / 6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .div1 img {
+      max-height: 80px;
+      margin: 20px;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .search-input {
+      padding: 8px 12px;
+      border: none;
+      border-right: none;
+      color: #ccc;
+      background-color: #0b131e;
+      /* Sin borde derecho para unir al botón */
+      border-radius: 15px 0 0 15px;
+      /* Borde redondeado solo en el lado izquierdo */
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-button {
+      padding: 6px 12px;
+      border: none;
+      background-color: #1798ff;
+      color: #000;
+      cursor: pointer;
+      border-radius: 0 15px 15px 0;
+      /* Borde redondeado solo en el lado derecho */
+      border-left: none;
+      /* Sin borde izquierdo para unir al input */
+      font-size: 16px;
+    }
+
+    .search-button:hover {
+      background-color: #0056b3;
+      /* Color al pasar el cursor por encima */
+    }
+
+
+    .div2 {
+      background-color: #202B3B;
+      outline: 1.5px solid black;
+      border-radius: 6px;
+      grid-area: 2 / 4 / 4 / 6;
+    }
+
+    .div3 {
+      background-color: #202B3B;
+      outline: 1.5px solid black;
+      border-radius: 6px;
+      grid-area: 4 / 4 / 6 / 6;
+    }
+
+    .div4 {
+      background-color: #202B3B;
+      outline: 1.5px solid black;
+      border-radius: 6px;
+      grid-area: 2 / 1 / 6 / 4;
+    }
+
+    div.middle-div #left-div {
+      outline: 1px solid black;
+      /* Borde para visibilidad */
+    }
+
+    #appContainer {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    div.middle-div #right-div {
+      outline: 1px solid black;
+      height: 90%;
+      /* Borde para visibilidad */
+      display: grid;
+      grid-template-columns: 2, 1fr;
+      gap: 10px;
+    }
+
+    div.middle-div #right-div div {
+      border-radius: 6px;
+      background-color: #202B3B;
+      outline: 1px solid black;
+    }
+  </style>
+<link rel="stylesheet" href="styles-5INURTSO.css"><style ng-app-id="ng">.createdBy[_ngcontent-ng-c4195545085]{position:absolute;top:100px;margin:auto;left:50%;transform:translate(-50%);text-align:center;width:60%;border-radius:6px;background-color:#2e8b57;color:#f0f0f0}@media (max-width: 768px){.createdBy[_ngcontent-ng-c4195545085]{top:90px;width:90%}}span[_ngcontent-ng-c4195545085], a[_ngcontent-ng-c4195545085]{font-weight:700;color:#d4f0d4;text-decoration:none}a[_ngcontent-ng-c4195545085]:hover{color:#fff;cursor:pointer}</style><style ng-app-id="ng">.title-div[_ngcontent-ng-c316436381]{width:100%;display:flex;align-items:center;flex-direction:row;justify-content:center}.title-div[_ngcontent-ng-c316436381]   div[_ngcontent-ng-c316436381]{display:flex;flex-direction:row;align-items:center}.title-div[_ngcontent-ng-c316436381]   img[_ngcontent-ng-c316436381]{height:50px}.title[_ngcontent-ng-c316436381]{text-align:center;font-size:2rem;margin-left:5px;color:#dcdcdc}.today-div[_ngcontent-ng-c316436381]{width:100%}.today-div[_ngcontent-ng-c316436381]   h1[_ngcontent-ng-c316436381]{font-size:5em;text-align:center;margin-top:10px;background:linear-gradient(135deg,#42d392,#1798ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}@media (max-width: 800px){.today-div[_ngcontent-ng-c316436381]   h1[_ngcontent-ng-c316436381]{margin-top:40px;font-size:3em}.title[_ngcontent-ng-c316436381]{font-size:1rem}}</style><style ng-app-id="ng">.air-condition[_ngcontent-ng-c474882131]{width:100%;margin-top:10px;height:100%}.air-condition[_ngcontent-ng-c474882131]   h4[_ngcontent-ng-c474882131]{color:#ccc}.grid-air[_ngcontent-ng-c474882131]{display:grid;grid-template-columns:repeat(2,1fr)}.air-info[_ngcontent-ng-c474882131]{display:flex;align-items:center;flex-direction:column;color:#f2f2f2}.air-info[_ngcontent-ng-c474882131]   div[_ngcontent-ng-c474882131]{display:flex;justify-content:flex-start;align-items:center;flex-direction:row}.air-info[_ngcontent-ng-c474882131]   img[_ngcontent-ng-c474882131]{max-width:1.3em;margin-right:7px}.info-data[_ngcontent-ng-c474882131]{background:linear-gradient(135deg,#42d392,#1798ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bolder;font-size:1.5em;margin-top:5px}</style><style ng-app-id="ng">.weather-app[_ngcontent-ng-c1302958674]{height:100%;width:100%;margin:auto;border-radius:6px}.weather-app[_ngcontent-ng-c1302958674]   h4[_ngcontent-ng-c1302958674]{margin-bottom:0;color:#ccc;margin-left:20px}.div-hours[_ngcontent-ng-c1302958674]{display:flex;flex-direction:row;justify-content:space-evenly;align-items:start;width:100%;overflow-x:scroll;height:auto}.scrollable[_ngcontent-ng-c1302958674]{overflow-x:scroll;scrollbar-width:thin;scrollbar-color:#1e90ff #202B3B}.scrollable[_ngcontent-ng-c1302958674]::-webkit-scrollbar{height:8px}.scrollable[_ngcontent-ng-c1302958674]::-webkit-scrollbar-track{background:#202b3b;border-radius:30px}.scrollable[_ngcontent-ng-c1302958674]::-webkit-scrollbar-thumb{background:#1e90ff;border-radius:10px}.scrollable[_ngcontent-ng-c1302958674]::-webkit-scrollbar-thumb:hover{background:#6495ed}.hour-info[_ngcontent-ng-c1302958674]{display:flex;flex-direction:column;width:150px;align-items:center;justify-content:space-around;padding:10px;color:#ccc}.hour-info[_ngcontent-ng-c1302958674]   .p-hour[_ngcontent-ng-c1302958674]{font-size:small}.hour-info[_ngcontent-ng-c1302958674]   .p-temp[_ngcontent-ng-c1302958674]{font-size:large;font-weight:bolder}.hour-icon[_ngcontent-ng-c1302958674]{width:80px}.weather-info[_ngcontent-ng-c1302958674]{border:none;border-radius:10px;width:90%;height:100%;overflow-y:auto;margin:auto;display:flex;flex-direction:column;justify-content:flex-start}.no-data[_ngcontent-ng-c1302958674]{width:100%;display:flex}.no-data[_ngcontent-ng-c1302958674]   img[_ngcontent-ng-c1302958674]{margin:auto;width:60%}.resolved-address[_ngcontent-ng-c1302958674]{font-size:24px;color:#333;font-weight:700}.temperature[_ngcontent-ng-c1302958674], .conditions[_ngcontent-ng-c1302958674], .humidity[_ngcontent-ng-c1302958674], .description[_ngcontent-ng-c1302958674], .sunrise[_ngcontent-ng-c1302958674], .sunset[_ngcontent-ng-c1302958674]{font-size:18px;color:#ccc;margin-left:30px}span[_ngcontent-ng-c1302958674]{font-weight:700;color:#007bff}.weather-icon[_ngcontent-ng-c1302958674]{width:70px;display:block;margin:20px auto}.footer[_ngcontent-ng-c1302958674]{text-align:center;margin-top:20px;color:#888;font-size:14px}</style></head>
+
+<body><!--nghm-->
+  <app-root _nghost-ng-c4195545085 ng-version="18.2.10" ngh="0" ng-server-context="ssg"><div _ngcontent-ng-c4195545085 class="createdBy"><p _ngcontent-ng-c4195545085><span _ngcontent-ng-c4195545085>Angular #1.</span> Aplicación demo creada por <a _ngcontent-ng-c4195545085 ng-href="https://joaquinerenas.icu/" target="_blank" rel="noopener noreferrer">Joaquín Erenas</a>.</p></div><div _ngcontent-ng-c4195545085 class="middle-div"><div _ngcontent-ng-c4195545085 class="div1"><img _ngcontent-ng-c4195545085 src="assets/logo.png" alt="Logo"><app-weather-search _ngcontent-ng-c4195545085 _nghost-ng-c391218665 ngh="0"><div _ngcontent-ng-c391218665 class="search-container"><input _ngcontent-ng-c391218665 type="text" placeholder="Buscar..." class="search-input ng-untouched ng-pristine ng-valid" value><button _ngcontent-ng-c391218665 class="search-button">🔎︎</button></div></app-weather-search></div><div _ngcontent-ng-c4195545085 class="div2"><app-weather-today _ngcontent-ng-c4195545085 _nghost-ng-c316436381 ngh="1"><!----><!----></app-weather-today></div><div _ngcontent-ng-c4195545085 class="div3"><app-weather-condition _ngcontent-ng-c4195545085 _nghost-ng-c474882131 ngh="2"><!----></app-weather-condition></div><div _ngcontent-ng-c4195545085 class="div4"><app-weather _ngcontent-ng-c4195545085 _nghost-ng-c1302958674 ngh="3"><div _ngcontent-ng-c1302958674 class="weather-app"><div _ngcontent-ng-c1302958674 class="no-data"><img _ngcontent-ng-c1302958674 src="assets/nube.png" alt></div><!----><!----></div></app-weather></div></div></app-root>
+
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-DBYD5X7O.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"0":"t0","1":"t1"},"c":{"0":[],"1":[]}},{"t":{"0":"t2"},"c":{"0":[]}},{"t":{"1":"t3","2":"t4"},"c":{"1":[{"i":"t4","r":1}],"2":[]}}]}</script></body></html>
